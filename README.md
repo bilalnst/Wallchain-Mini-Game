@@ -98,3 +98,6 @@ npm start
 **Created by:** bilalnst
 **License:** MIT
 
+<img width="672" height="785" alt="image" src="https://github.com/user-attachments/assets/28d970b1-6fb4-42e7-9ecd-deace248a25f" />
+
+
