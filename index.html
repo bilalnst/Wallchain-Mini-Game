@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦆 Quack Jump! - Wallchain Mini Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="title-container">
+                <img src="assets/logo" alt="Logo" id="logo" class="logo">
+                <h1>🦆 Quack Jump!</h1>
+            </div>
+            <div class="score-display">
+                <div class="score-item">
+                    <span class="label">Mindshare:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Quacks Dodged:</span>
+                    <span id="quacks-dodged">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Speed:</span>
+                    <span id="speed">1x</span>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="controls">
+            <p>👆 Single tap = Jump | 👆👆 Double tap = Double Jump</p>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <div class="screen-content">
+                <h2>🦆 Quack Jump!</h2>
+                <p class="subtitle">Got mindshare? Prove it.</p>
+                <p class="description">
+                    Jump over the Quacks! Miss one and it's "QUACK ATTACK!" 🤣
+                </p>
+                <button id="startBtn" class="btn">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen hidden">
+            <div class="screen-content">
+                <h2>QUACK ATTACK! 🦆💥</h2>
+                <p id="gameOverMessage">Quack overwhelmed you. Touch grass 🦆🌱</p>
+                <div class="final-stats">
+                    <p>Final Mindshare: <span id="finalScore">0</span></p>
+                    <p>Quacks Dodged: <span id="finalQuacks">0</span></p>
+                    <p>Best Streak: <span id="finalStreak">0</span></p>
+                </div>
+                <div class="buttons">
+                    <button id="restartBtn" class="btn">Try Again</button>
+                    <button id="leaderboardBtn" class="btn secondary">Leaderboard</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Screen -->
+        <div id="leaderboardScreen" class="screen hidden">
+            <div class="screen-content">
+                <h2>🏆 Leaderboard</h2>
+                <div id="leaderboardList"></div>
+                <button id="backBtn" class="btn">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
